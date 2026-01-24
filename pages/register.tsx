@@ -63,22 +63,21 @@ export default function RegisterPage() {
     setLoading(true);
 
     try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbyUjUps1zfuxO_PL-qFTuGVzy3PaKBPTqBzARyRNq9N6tIds8CIVlCGiJ59tIsuu2HK/exec",
-        {
-          redirect: "follow",
-          method: "POST",
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8",
-          },
-          body: JSON.stringify({
-            ...result,
-            username: launchParams?.tgWebAppData?.user?.username ?? "-",
-          }),
-        }
-      );
-
-      router.push("/info");
+      // await fetch(
+      //   "https://script.google.com/macros/s/AKfycbyUjUps1zfuxO_PL-qFTuGVzy3PaKBPTqBzARyRNq9N6tIds8CIVlCGiJ59tIsuu2HK/exec",
+      //   {
+      //     redirect: "follow",
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "text/plain;charset=utf-8",
+      //     },
+      //     body: JSON.stringify({
+      //       ...result,
+      //       username: launchParams?.tgWebAppData?.user?.username ?? "-",
+      //     }),
+      //   }
+      // );
+      // router.push("/info");
     } catch (error) {
       console.log({ error });
 
